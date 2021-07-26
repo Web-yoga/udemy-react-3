@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import './characterPage.css';
-import {Col, Row, Container} from 'reactstrap';
+import {Col, Row} from 'reactstrap';
 import ItemList from '../itemList';
 import CharDetails from '../charDetails';
 
 export default class characterPage extends Component {
 	
 	state = {
-		selectedChar: null
+		selectedChar: 100
 	}
 	
 	onCharSelected = (id) => {

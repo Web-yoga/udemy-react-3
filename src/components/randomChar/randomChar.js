@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './randomChar.css';
 import gotService from '../../services/gotService';
 import Spinner from '../spinner/';
-import ErrorMessage from '../errorMessage/errorMessage';
+import ErrorMessage from '../errorMessage/';
 
 
 export default class RandomChar extends Component {
@@ -38,7 +38,7 @@ export default class RandomChar extends Component {
         });
     }
 
-    updateChar() {
+    updateChar = () => {
         const id = Math.floor(Math.random()*140 + 25);
         // const id = 130000;
         this.gotService
