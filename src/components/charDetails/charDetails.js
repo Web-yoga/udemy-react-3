@@ -4,14 +4,21 @@ import gotService from '../../services/gotService';
 export default class CharDetails extends Component {
 
 	gotService = new gotService();
+	
     state = {
-        char : null
-    };
+        char: null
+    }
 	
 	componentDidMount(){
 		this.updateChar();
 	}
 	
+	componentDidUpdate(prevProps){
+		if(this.props.charId !== prevProps.charId){
+			this.updateChar();
+		}
+	}
+		
 	updateChar(){
 		const {charId} = this.props;
 		if(!charId){
