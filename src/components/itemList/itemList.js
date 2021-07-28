@@ -26,7 +26,7 @@ export default class ItemList extends Component {
 	}
 	
 	renderItems(arr){
-		arr.map((item, i) => {
+		return arr.map((item, i) => {
 			return(
 				<li 
 				key = {i}
@@ -51,6 +51,6 @@ export default class ItemList extends Component {
             <ul className="item-list list-group">
 				{items}
             </ul>
-        );
+        )
     }
 }
